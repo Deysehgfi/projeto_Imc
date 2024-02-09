@@ -11,13 +11,27 @@ btn.addEventListener('click', (peso,altura)=>{
             imc = peso/(altura*altura)
             
           
-             if(imc<16,9){
-               document.getElementById("classificacao").innerHTML = `Muito abaixo do peso`
-            }
+             if(imc<=16,9){
+               document.getElementById("classificacao").innerHTML = `Muito abaixo do peso`}
 
-            else if(imc>=17 || imc<= 18,4){
-               document.getElementById("classificacao").innerHTML =`Abaixo do peso`
-             }
+            if(imc>=17 && imc<= 18.4){
+               document.getElementById("classificacao").innerHTML =`Abaixo do peso`}
+
+             if(imc>=18.5 && imc<= 24.9){
+               document.getElementById("classificacao").innerHTML =`Peso normal`}
+
+              if(imc>=25 && imc<= 29.9){
+               document.getElementById("classificacao").innerHTML =`Acima do peso`}
+
+              if(imc>=30 && imc<= 34.9){
+               document.getElementById("classificacao").innerHTML =`Obesidade grau I`}
+
+              if(imc>=35 && imc<= 40){
+               document.getElementById("classificacao").innerHTML =`Obesidade grau II`}
+
+             if(imc>40){
+               document.getElementById("classificacao").innerHTML =`Obesidade grau III`}
+
             return document.getElementById("resposta").innerHTML =`Seu IMC é:${Math.floor(imc)}`
        })
 
